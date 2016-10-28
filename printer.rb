@@ -8,13 +8,13 @@ class Printer
 
   def print_success(rate_index)
     @successes += 1
-    puts "#{@index}: Success, Rate: #{rate_index}\n\n"
+    puts "#{@index}: Success, Rate: #{rate_index + 1}\n\n"
     @index += 1
   end
 
   def print_failure(rate_index)
     @failures += 1
-    puts "#{@index}: Failure, Rate: #{rate_index}\n\n"
+    puts "#{@index}: Failure, Rate: #{rate_index + 1}\n\n"
     @index += 1
   end
 
