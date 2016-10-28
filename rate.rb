@@ -13,15 +13,15 @@ class Rate
     @current_failure = 0
   end
 
-  def succeed
-    @printer.print_success
+  def succeed(rate_index)
+    @printer.print_success rate_index
     @current_failure = 0
     @current_success += 1
     check_success_threshold
   end
 
-  def fail
-    @printer.print_failure
+  def fail(rate_index)
+    @printer.print_failure rate_index
     @current_success = 0
     @current_failure += 1
     check_failure_threshold

@@ -24,8 +24,8 @@ class RateList
     max_rate = @max_rate_list.get packet_index
     success = @rate_index <= max_rate
     @should_go_up = @should_go_down = false
-    @should_go_up = @current_rate.succeed if success
-    @should_go_down = @current_rate.fail unless success
+    @should_go_up = @current_rate.succeed @rate_index if success
+    @should_go_down = @current_rate.fail @rate_index unless success
     success
   end
 
