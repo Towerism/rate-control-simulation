@@ -2,5 +2,6 @@
 
 require_relative 'simulator'
 
-simulator = Simulator.new 1000, MaxRateList.new, Printer.new
+iterations = 1000
+simulator = Simulator.new iterations, MaxRateList.new, Printer.new
 simulator.run
