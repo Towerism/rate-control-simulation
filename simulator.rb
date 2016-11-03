@@ -45,6 +45,7 @@ class Simulator
     while @successes < @n
       success = @rate_list.try i
       @successes += 1 if success
+      i += 1;
     end
     @printer.print_summary
   end
